@@ -241,7 +241,7 @@ button {
   background: var(--accent-gradient);
   color: var(--text-primary) !important;
   padding: 8px 20px !important;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
 }
@@ -597,6 +597,8 @@ button {
 .chat-widget-input-form input:focus {
   outline: none;
   border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .chat-send-btn {
@@ -835,15 +837,17 @@ details[open] .skills-category-header::after {
 .timeline-card {
   padding: 32px 40px;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: #12131a;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+              var(--card-border-gradient) border-box;
   box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .timeline-card:hover {
   transform: translateX(6px);
-  border-color: rgba(6, 182, 212, 0.2);
+  background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+              var(--card-border-active) border-box;
   box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
@@ -903,19 +907,21 @@ details[open] .skills-category-header::after {
 .timeline-bullets {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 20px;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+  margin-bottom: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-bottom 0.4s ease;
   overflow: hidden;
 }
 
 .timeline-bullets.collapsed-bullets {
   max-height: 0;
   opacity: 0;
+  margin-bottom: 0;
 }
 
 .timeline-bullets.expanded-bullets {
   max-height: 1200px;
   opacity: 1;
+  margin-bottom: 20px;
 }
 
 .timeline-bullets li {
@@ -967,16 +973,18 @@ details[open] .skills-category-header::after {
   flex-direction: column;
   height: 100%;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: #12131a;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+              var(--card-border-gradient) border-box;
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+              var(--card-border-active) border-box;
   box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6);
-  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .project-header {
@@ -1182,15 +1190,17 @@ dialog[open]::backdrop {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: #12131a;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+              var(--card-border-gradient) border-box;
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cert-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(79, 70, 229, 0.25);
+  background: linear-gradient(var(--bg-card-hover), var(--bg-card-hover)) padding-box,
+              var(--card-border-active) border-box;
   box-shadow: 0 15px 35px -5px rgba(79, 70, 229, 0.2);
 }
 
@@ -1233,6 +1243,15 @@ dialog[open]::backdrop {
 .cert-date {
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+
+@media (min-width: 600px) {
+  .certifications-grid .cert-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: calc(50% - 12px);
+  }
 }
 
 /* ==========================================================================
@@ -1281,11 +1300,22 @@ dialog[open]::backdrop {
   color: var(--text-primary);
 }
 
+.contact-svg {
+  color: var(--accent-cyan);
+  transition: transform var(--transition-smooth), color var(--transition-smooth);
+}
+
+.contact-details-list li:hover .contact-svg {
+  transform: scale(1.15);
+  color: var(--text-primary);
+}
+
 .contact-form-wrapper {
   padding: 40px;
   border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  background: #12131a;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+              var(--card-border-gradient) border-box;
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
 }
 
@@ -1323,6 +1353,7 @@ dialog[open]::backdrop {
   outline: none;
   border-color: var(--accent-cyan);
   background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
 }
 
 .form-group textarea {
@@ -1331,10 +1362,10 @@ dialog[open]::backdrop {
 }
 
 .btn-submit-form {
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   font-size: 1rem;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .form-success-toast {
@@ -1539,8 +1570,9 @@ dialog[open]::backdrop {
   max-width: 100%;
   height: 600px;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: #12131a;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+              var(--card-border-gradient) border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
