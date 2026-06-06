@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://www.thesushantanand.com/sitemap.xml
+Sitemap: https://www.thesushantanand.in/sitemap.xml
