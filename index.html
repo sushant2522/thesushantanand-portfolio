@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sushant Anand | Principal Consultant, Java & Agentic AI Specialist</title>
-  <meta name="description" content="Personal portfolio of Sushant Anand, a Results-driven Principal Consultant and Full Stack Java Developer with 10+ years of experience specializing in Agentic AI integration, enterprise banking platforms (Oracle OBDX, FLEXCUBE), Spring Boot, and Microservices.">
-  <meta name="keywords" content="Sushant Anand, Agentic AI, Java Developer, Principal Consultant, Spring Boot, Microservices, Oracle OBDX, FLEXCUBE, OCI Generative AI, Portfolio">
+  <meta name="description" content="Personal portfolio of Sushant Anand, a Results-driven Principal Consultant and Full Stack Java Developer with 10+ years of experience specializing in Agentic AI integration, Digital Banking &amp; Core Banking platforms (Oracle OBDX, FLEXCUBE), Spring Boot, and Microservices.">
+  <meta name="keywords"
+    content="Sushant Anand, Agentic AI, Java Developer, Principal Consultant, Spring Boot, Microservices, Oracle OBDX, FLEXCUBE, OCI Generative AI, Portfolio">
   <meta name="author" content="Sushant Anand">
-  
+
   <!-- Open Graph / LinkedIn / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.thesushantanand.com/">
   <meta property="og:title" content="Sushant Anand | Principal Consultant, Java & Agentic AI Specialist">
-  <meta property="og:description" content="10+ years of expertise bridging enterprise core banking implementations with modern Agentic AI workflows, Spring Boot, and AWS cloud.">
+  <meta property="og:description" content="10+ years of expertise delivering Digital Banking &amp; Core Banking platforms (Oracle OBDX, FLEXCUBE) with modern Agentic AI workflows, built on Spring Boot and AWS cloud.">
   <meta property="og:image" content="assets/profile_image.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
   <!-- JSON-LD Structured Data for Person (SEO) -->
   <script type="application/ld+json">
   {
@@ -34,6 +38,10 @@
     "worksFor": {
       "@type": "Organization",
       "name": "Oracle"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "NIIST Bhopal"
     },
     "address": {
       "@type": "PostalAddress",
@@ -53,15 +61,21 @@
       "Java",
       "Microservices",
       "Oracle OBDX",
-      "Oracle FLEXCUBE",
-      "Core Banking"
+      "Digital Banking",
+      "Core Banking",
+      "Oracle FLEXCUBE"
     ]
+  }
   </script>
-  
+
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+
+  <!-- Full-page glitter / floating particles -->
+  <div id="glitter-bg" aria-hidden="true"></div>
 
   <!-- Background Accent Lights -->
   <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
@@ -77,6 +91,7 @@
         <ul>
           <li><a href="#about" class="nav-item">About</a></li>
           <li><a href="#experience" class="nav-item">Experience</a></li>
+          <li><a href="#education" class="nav-item">Education</a></li>
           <li><a href="#projects" class="nav-item">Projects</a></li>
           <li><a href="#certifications" class="nav-item">Certifications</a></li>
           <li><a href="#ai-assistant" class="nav-item">AI Assistant</a></li>
@@ -91,308 +106,432 @@
     </div>
   </header>
 
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+
   <!-- Main Content Land -->
   <main id="main-content">
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
     <section class="hero-section" id="hero">
+
+      <!-- Grid background overlay -->
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+
       <div class="hero-container">
-        <div class="hero-card glass-panel">
-          <div class="hero-avatar-wrapper">
-            <img src="assets/profile_image.jpg" alt="Sushant Anand" class="hero-avatar" width="120" height="120">
+
+        <!-- LEFT: Text + CTAs -->
+        <div class="hero-text-col">
+          <!-- Availability badge -->
+          <div class="hero-availability">
+            <span class="avail-dot"></span>
+            Available for consulting
           </div>
-          <div class="badge-glow-wrapper">
-            <span class="badge-glow">Principal Consultant & Developer</span>
-          </div>
+
           <h1 class="hero-headline">
-            Bridging Enterprise Banking Systems with <span class="gradient-text">Agentic AI</span>
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="hero-name gradient-text">Sushant Anand</span>
           </h1>
-          <p class="hero-subtext">
-            Hi, I'm <strong>Sushant Anand</strong>. A results-driven Full Stack Java Developer and Principal Consultant with 10+ years of experience delivering mission-critical financial applications and building autonomous AI workflows using Java, Spring Boot, Microservices, and Large Language Models.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Let's Connect</a>
-            <a href="#ai-assistant" class="btn btn-secondary">Chat with My Agent</a>
+
+          <!-- Company logo ticker: cycles through past employers -->
+          <div class="company-ticker" aria-label="Previously worked at">
+            <span class="ticker-prefix">Associated with</span>
+            <div class="ticker-logos-wrap">
+              <!-- Oracle -->
+              <div class="ticker-logo active" id="logo-oracle">
+                <svg viewBox="0 0 120 36" width="90" height="27" aria-label="Oracle" role="img">
+                  <text x="2" y="28" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700"
+                    fill="#C74634" letter-spacing="-1">ORACLE</text>
+                </svg>
+              </div>
+              <!-- IBM -->
+              <div class="ticker-logo" id="logo-ibm">
+                <svg viewBox="0 0 80 36" width="64" height="29" aria-label="IBM" role="img">
+                  <text x="2" y="28" font-family="Arial Black,Arial,sans-serif" font-size="32" font-weight="900"
+                    fill="#1F70C1" letter-spacing="2">IBM</text>
+                </svg>
+              </div>
+              <!-- Wipro -->
+              <div class="ticker-logo" id="logo-wipro">
+                <svg viewBox="0 0 120 36" width="90" height="27" aria-label="Wipro" role="img">
+                  <circle cx="12" cy="18" r="10" fill="#341C75" opacity="0.15" />
+                  <circle cx="12" cy="18" r="6" fill="#341C75" opacity="0.3" />
+                  <!-- Sunflower petals -->
+                  <circle cx="12" cy="8" r="2.5" fill="#F59E0B" />
+                  <circle cx="20" cy="13" r="2.5" fill="#EF4444" />
+                  <circle cx="20" cy="23" r="2.5" fill="#10B981" />
+                  <circle cx="12" cy="28" r="2.5" fill="#3B82F6" />
+                  <circle cx="4" cy="23" r="2.5" fill="#8B5CF6" />
+                  <circle cx="4" cy="13" r="2.5" fill="#F97316" />
+                  <circle cx="12" cy="18" r="4" fill="#1e1b4b" />
+                  <text x="27" y="26" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700"
+                    fill="#341C75" letter-spacing="0">Wipro</text>
+                </svg>
+              </div>
+              <!-- Synergy Connect -->
+              <div class="ticker-logo" id="logo-synergy">
+                <svg viewBox="0 0 200 36" width="150" height="27" aria-label="Synergy Connect" role="img">
+                  <circle cx="10" cy="10" r="4" fill="#00BFA5" />
+                  <circle cx="22" cy="20" r="4" fill="#00BFA5" />
+                  <circle cx="10" cy="26" r="3" fill="#00BFA5" opacity="0.7" />
+                  <line x1="10" y1="10" x2="22" y2="20" stroke="#00BFA5" stroke-width="1.5" />
+                  <line x1="22" y1="20" x2="10" y2="26" stroke="#00BFA5" stroke-width="1.5" opacity="0.7" />
+                  <text x="34" y="26" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700"
+                    fill="#00BFA5" letter-spacing="0">Synergy Connect</text>
+                </svg>
+              </div>
+              <!-- Neterson -->
+              <div class="ticker-logo" id="logo-neterson">
+                <svg viewBox="0 0 160 36" width="120" height="27" aria-label="Neterson Technologies" role="img">
+                  <polygon points="14,2 24,8 24,20 14,26 4,20 4,8" fill="none" stroke="#F59E0B" stroke-width="2" />
+                  <text x="13" y="20" font-family="Arial Black,Arial,sans-serif" font-size="11" font-weight="900"
+                    fill="#F59E0B" text-anchor="middle">N</text>
+                  <text x="32" y="26" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700"
+                    fill="#F59E0B" letter-spacing="0">Neterson</text>
+                </svg>
+              </div>
+            </div>
           </div>
-          
-          <div class="floating-tech-chips" aria-label="Technical skills highlights">
-            <span class="tech-chip">Spring Boot</span>
-            <span class="tech-chip">Agentic AI</span>
-            <span class="tech-chip">Oracle OBDX</span>
-            <span class="tech-chip">FLEXCUBE</span>
-            <span class="tech-chip">Kafka</span>
-            <span class="tech-chip">Microservices</span>
-            <span class="tech-chip">OCI GenAI</span>
+
+          <p class="hero-roles">
+            <span class="hero-role role-cyan">Principal Consultant</span>
+            <span class="hero-role-divider">·</span>
+            <span class="hero-role role-java">Full Stack Java Dev</span>
+            <span class="hero-role-divider">·</span>
+            <span class="hero-role role-indigo">Agentic AI Specialist</span>
+          </p>
+
+          <p class="hero-subtext">
+            I architect intelligent systems that bridge human expertise with AI capabilities. Specializing in <a
+              href="#about" class="hero-link-cyan">autonomous agents</a>, <a href="#about"
+              class="hero-link-violet">enterprise AI solutions</a>, and <strong>strategic consulting</strong> for
+            Fortune 500 companies.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-hero-primary">
+              Let's Collaborate
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a href="assets/Sushant_Anand_Resume.pdf" class="btn btn-hero-outline" download
+              aria-label="Download Sushant Anand's Resume">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <polyline points="7,10 12,15 17,10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download CV
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="hero-socials-label">Connect:</span>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="hero-social-icon" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/thesushantanand/" target="_blank" rel="noopener"
+              class="hero-social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://denml.com" target="_blank" rel="noopener" class="hero-social-icon" aria-label="denml.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
+            </a>
           </div>
         </div>
+
+        <!-- RIGHT: Glowing Avatar Circle + skills orbit -->
+        <div class="hero-avatar-col">
+          <div class="hero-avatar-scene">
+
+            <!-- Outer skills orbit ring (CSS-animated) -->
+            <div class="hero-orbit-ring" aria-hidden="true">
+              <div class="orbit-track">
+                <!-- Skills positioned around the orbit via JS -->
+              </div>
+            </div>
+
+            <!-- Floating badge: top-right -->
+            <div class="hero-float-badge badge-top-right">
+              <span>10+ Years</span>
+            </div>
+
+            <!-- The main glowing photo circle -->
+            <div class="hero-sa-ring">
+              <div class="hero-sa-inner hero-sa-photo">
+                <img src="assets/cartoon_avatar.png" alt="Sushant Anand - Cartoon Avatar" class="hero-cartoon-img"
+                  width="268" height="268" loading="eager" />
+              </div>
+            </div>
+
+            <!-- Floating badge: bottom-left -->
+            <div class="hero-float-badge badge-bottom-left">
+              <span>AI/ML Expert</span>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Scroll to explore indicator -->
+      <div class="hero-scroll-cta">
+        <span>Scroll to explore</span>
+        <div class="hero-scroll-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19 12 12 19 5 12" />
+          </svg>
+        </div>
+      </div>
+
     </section>
 
     <!-- About Section -->
     <section class="about-section scroll-reveal" id="about">
       <div class="section-container">
-        <h2 class="section-title">Professional Identity</h2>
-        <div class="about-grid">
-          <div class="about-description">
-            <h3 class="about-subtitle">The Confluence of Enterprise Core & Modern Intelligence</h3>
-            <p>
-              I am a results-driven Full Stack Java Developer and Principal Consultant with over a decade of expertise delivering high-volume, mission-critical enterprise applications.
-            </p>
-            <p>
-              My professional moat lies at the intersection of **structured banking platforms** (Oracle OBDX, FLEXCUBE) and **cutting-edge Agentic AI workflows**. I design software that doesn't just execute static routines, but autonomously reasons, coordinates tools, and solves problems safely within highly regulated financial architectures.
-            </p>
-            <p>
-              Whether leading a team of 40 engineers to maintain a 99.9% uptime SLA for multi-million user apps or architecting self-optimizing database query managers, I focus on shipping clean, resilient, and business-impacting code.
-            </p>
+
+        <!-- Header -->
+        <div class="about-header">
+          <div class="about-tagline-chip">
+            <span class="chip-dot"></span>
+            10 Years · Enterprise AI · Full Stack Java
           </div>
-          
-          <div class="skills-showcase">
-            <h3 class="about-subtitle">Core Moat & Skills</h3>
-            <div class="skills-categories-accordion">
-              
-              <!-- Category 1: AI & Automation -->
-              <details class="skills-category-group" open>
-                <summary class="skills-category-header">AI & Agentic Orchestration</summary>
-                <div class="skills-badges">
-                  <span class="skill-badge skill-ai">Agentic AI</span>
-                  <span class="skill-badge skill-ai">Multi-Agent Systems</span>
-                  <span class="skill-badge skill-ai">LangChain</span>
-                  <span class="skill-badge skill-ai">RAG</span>
-                  <span class="skill-badge skill-ai">OpenAI API</span>
-                  <span class="skill-badge skill-ai">OCI Generative AI</span>
-                  <span class="skill-badge skill-ai">Prompt Engineering</span>
-                </div>
-              </details>
+          <h2 class="section-title">About Me</h2>
+        </div>
 
-              <!-- Category 2: Core Java & Spring -->
-              <details class="skills-category-group" open>
-                <summary class="skills-category-header">Full Stack Java & APIs</summary>
-                <div class="skills-badges">
-                  <span class="skill-badge skill-java">Java / J2EE</span>
-                  <span class="skill-badge skill-java">Spring Boot</span>
-                  <span class="skill-badge skill-java">Spring MVC</span>
-                  <span class="skill-badge skill-java">Hibernate / JPA</span>
-                  <span class="skill-badge skill-java">REST Microservices</span>
-                  <span class="skill-badge skill-java">Kafka</span>
-                  <span class="skill-badge skill-java">AngularJS</span>
-                </div>
-              </details>
+        <div class="about-grid">
 
-              <!-- Category 3: Enterprise Banking -->
-              <details class="skills-category-group">
-                <summary class="skills-category-header">Enterprise Core Banking</summary>
-                <div class="skills-badges">
-                  <span class="skill-badge skill-banking">Oracle OBDX</span>
-                  <span class="skill-badge skill-banking">Oracle FLEXCUBE</span>
-                  <span class="skill-badge skill-banking">Core Banking Enhancements</span>
-                  <span class="skill-badge skill-banking">Digital Banking Implementation</span>
-                  <span class="skill-badge skill-banking">Loans & Deposits General Ledger</span>
-                </div>
-              </details>
+          <!-- LEFT: Bio + Stats -->
+          <div class="about-description">
+            <h3 class="about-subtitle">The Confluence of Enterprise Core &amp; Modern Intelligence</h3>
 
-              <!-- Category 4: Cloud & DevOps -->
-              <details class="skills-category-group">
-                <summary class="skills-category-header">Cloud, Database & DevOps</summary>
-                <div class="skills-badges">
-                  <span class="skill-badge skill-devops">AWS (EC2)</span>
-                  <span class="skill-badge skill-devops">PostgreSQL</span>
-                  <span class="skill-badge skill-devops">Oracle DB</span>
-                  <span class="skill-badge skill-devops">Docker</span>
-                  <span class="skill-badge skill-devops">Jenkins CI/CD</span>
-                  <span class="skill-badge skill-devops">Git / Bitbucket</span>
-                  <span class="skill-badge skill-devops">TDD / JUnit</span>
-                </div>
-              </details>
+            <p>
+              I am a results-driven <mark class="bio-chip chip-java">Full Stack Java Developer</mark> and
+              <mark class="bio-chip chip-ai">Principal Consultant</mark> with over a decade of expertise
+              delivering high-volume, mission-critical enterprise applications.
+            </p>
+            <p>
+              My professional moat lies at the intersection of
+              <mark class="bio-chip chip-banking">Digital Banking</mark>
+              &amp; <mark class="bio-chip chip-banking">Core Banking</mark>
+              (<mark class="bio-chip chip-banking">Oracle OBDX</mark> &amp; FLEXCUBE) and
+              <mark class="bio-chip chip-ai">Agentic AI workflows</mark>.
+              I design software that autonomously reasons, coordinates tools, and solves problems
+              safely within highly regulated financial architectures.
+            </p>
+            <p>
+              Whether leading a team of <strong>40 engineers</strong> to maintain a
+              <strong>99.9% uptime SLA</strong> for multi-million user apps or architecting
+              self-optimizing database query managers, I focus on shipping clean, resilient,
+              and business-impacting code.
+            </p>
 
+            <!-- What I bring -->
+            <ul class="about-brings">
+              <li><span class="bring-icon">🎯</span> End-to-end ownership from architecture to production</li>
+              <li><span class="bring-icon">🤝</span> Bridging banking domain expertise with modern AI</li>
+              <li><span class="bring-icon">⚡</span> Performance-obsessed engineering at enterprise scale</li>
+            </ul>
+
+            <!-- Impact Stats -->
+            <div class="about-stats">
+              <div class="stat-card stat-cyan">
+                <span class="stat-number">10<span class="stat-suffix">+</span></span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-card stat-indigo">
+                <span class="stat-number">40<span class="stat-suffix">+</span></span>
+                <span class="stat-label">Engineers Led</span>
+              </div>
+              <div class="stat-card stat-violet">
+                <span class="stat-number">99.9<span class="stat-suffix">%</span></span>
+                <span class="stat-label">Uptime SLA</span>
+              </div>
+              <div class="stat-card stat-orange">
+                <span class="stat-number">5<span class="stat-suffix">+</span></span>
+                <span class="stat-label">Countries Served</span>
+              </div>
             </div>
           </div>
-        </div>
+
+          <!-- RIGHT: Core Moat & Skills (Vertical 3D Carousel) -->
+          <div class="skills-showcase-side" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h3 class="about-subtitle" style="text-align: center; margin-bottom: 20px;">Core Moat &amp; Skills</h3>
+            <div class="journey-carousel skills-carousel" id="skillsCarouselContainer" aria-label="Interactive 3D Carousel of Skill Categories">
+              <div class="scene skills-scene" id="skillsScene">
+                <!-- JS injected cards go here -->
+              </div>
+            </div>
+          </div>
+        </div><!-- /about-grid -->
       </div>
     </section>
 
-    <!-- Experience Timeline Section -->
+
+    <!-- Professional Journey Section -->
     <section class="experience-section scroll-reveal" id="experience">
       <div class="section-container">
-        <h2 class="section-title">Professional Journey</h2>
-        <div class="experience-grid">
-          <div class="experience-illustration-container">
-            <img src="assets/experience_illustration.png" alt="Sushant Anand Professional Experience Timeline Illustration" class="experience-illustration-img" loading="lazy" width="400" height="400">
+
+        <!-- Section Header -->
+        <div class="about-header">
+          <div class="about-tagline-chip">
+            <span class="chip-dot"></span>
+            5 Companies · 10+ Years · EMEA &amp; India
           </div>
-          <div class="timeline">
-          
-          <!-- Experience Card 1: Oracle India -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="role-company">
-                  <h3 class="role-title">Principal Consultant</h3>
-                  <p class="company-name">Oracle India</p>
-                </div>
-                <span class="role-dates">Jan 2025 – Present</span>
+          <h2 class="section-title">Professional Journey</h2>
+        </div>
+
+        <!-- Journey Stats Strip -->
+        <div class="journey-stats-strip">
+          <div class="journey-stat"><span class="jstat-num">10<span class="jstat-suf">+</span></span><span class="jstat-label">Years</span></div>
+          <div class="jstat-divider"></div>
+          <div class="journey-stat"><span class="jstat-num">5</span><span class="jstat-label">Companies</span></div>
+          <div class="jstat-divider"></div>
+          <div class="journey-stat"><span class="jstat-num">40<span class="jstat-suf">+</span></span><span class="jstat-label">Engineers Led</span></div>
+          <div class="jstat-divider"></div>
+          <div class="journey-stat"><span class="jstat-num">EMEA</span><span class="jstat-label">Region</span></div>
+          <div class="jstat-divider"></div>
+          <div class="journey-stat"><span class="jstat-num">99.9<span class="jstat-suf">%</span></span><span class="jstat-label">Uptime SLA</span></div>
+        </div>
+
+        <!-- Globe Layout: Carousel + Detail Panel -->
+        <div class="journey-layout">
+
+          <!-- LEFT: Globe Scene -->
+          <div class="globe-scene" id="globe-scene">
+
+            <!-- Earth sphere (decorative) -->
+            <div class="earth-sphere" aria-hidden="true">
+              <div class="earth-clouds"></div>
+              <div class="earth-atmosphere"></div>
+              <div class="earth-shine"></div>
+            </div>
+
+            <!-- 3D card carousel (JS populated) -->
+            <div class="globe-carousel" id="globe-carousel"></div>
+
+            <p class="globe-hint">🌍 Hover to pause &nbsp;·&nbsp; Click card for full details</p>
+          </div>
+
+          <!-- RIGHT: Detail Panel -->
+          <div class="globe-detail-panel" id="globe-detail">
+            <div class="detail-fade-container" id="detail-fade-container">
+              <div class="detail-header-row">
+                <div class="detail-logo-container" id="detail-logo-container"></div>
+                <h2 class="detail-company" id="detail-company">Oracle India</h2>
               </div>
-              <div class="timeline-intro-summary">
-                Leading teams of 6-13 engineers delivering digital and core banking products (OBDX, FLEXCUBE) across EMEA banking clients. Successfully integrating generative AI to streamline compliance and operations.
+              <div class="detail-chips" id="detail-chips">
+                <span class="role-chip">AI + Banking</span>
+                <span class="role-chip">Principal Consultant</span>
               </div>
-              <button class="btn-toggle-bullets" aria-expanded="false" data-target="bullets-oracle">
-                Show Achievements
+              <h3 class="detail-role" id="detail-role">Principal Consultant</h3>
+              <p class="detail-dates" id="detail-dates">Jan 2025 – Present</p>
+              <p class="detail-brief" id="detail-brief">Leading Digital &amp; Core Banking delivery for EMEA Tier-1 banks</p>
+              <div class="detail-impact" id="detail-impact">📊 13 Clients · 6–13 Eng Teams</div>
+              <div class="detail-tags" id="detail-tags"></div>
+              <button class="detail-expand-btn" id="detail-expand-btn" data-index="0">
+                View Full Details <span class="btn-arrow">→</span>
               </button>
-              <ul class="timeline-bullets collapsed-bullets" id="bullets-oracle">
-                <li><strong>Team Leadership:</strong> Oversee cross-functional delivery of enterprise solutions for Tier-1 banks, directing architecture alignment, delivery governance, and client relationships.</li>
-                <li><strong>Digital Banking (Abu Dhabi Bank):</strong> Spearheaded full-cycle digital experience (OBDX) implementations for retail and corporate customers in the UAE market.</li>
-                <li><strong>Core Banking Rollouts (UCB Bank & FBC):</strong> Managed deployment of deposit, loan, and GL modules on schedule across African markets.</li>
-                <li><strong>AI Integration:</strong> Integrated Agentic AI systems to automate complex transaction routing, digital compliance screening, and database schema performance optimizations.</li>
-                <li><strong>CI/CD Acceleration:</strong> Established Oracle AI-powered deployment pipelines, resulting in a 10% reduction in delivery timelines and deployment errors.</li>
-                <li><strong>Platform Optimization:</strong> Isolated architectural bottlenecks via AI log diagnosis, raising general query/data integrity throughput by 10%.</li>
-              </ul>
-              <div class="tech-stack-tags">
-                <span class="tag">Java</span>
-                <span class="tag">Spring Boot</span>
-                <span class="tag">OBDX</span>
-                <span class="tag">FLEXCUBE</span>
-                <span class="tag">Agentic AI</span>
-                <span class="tag">Oracle DB</span>
-                <span class="tag">AWS</span>
-                <span class="tag">CI/CD</span>
-              </div>
             </div>
           </div>
 
-          <!-- Experience Card 2: IBM India -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="role-company">
-                  <h3 class="role-title">Lead Technical Advisor & Team Lead</h3>
-                  <p class="company-name">IBM India</p>
-                </div>
-                <span class="role-dates">Aug 2023 – Dec 2024</span>
-              </div>
-              <div class="timeline-intro-summary">
-                Managed a team of 40 developers across support levels L1-L3, maintaining high-availability SLAs for 13 mission-critical banking systems.
-              </div>
-              <button class="btn-toggle-bullets" aria-expanded="false" data-target="bullets-ibm">
-                Show Achievements
-              </button>
-              <ul class="timeline-bullets collapsed-bullets" id="bullets-ibm">
-                <li><strong>Uptime Governance:</strong> Guaranteed 99.9%+ availability for DMS, RSA, Internet Banking, and Merchant applications serving millions of active users.</li>
-                <li><strong>Streaming Integration:</strong> Configured Apache Kafka to ingest and throttle large-volume transaction pipelines.</li>
-                <li><strong>Data Optimization:</strong> Introduced high-efficiency Base64 image compression algorithms and strict schema uploads validation.</li>
-                <li><strong>Project Governance:</strong> Formulated detailed WBS plans, resource schedules, and managed executive stakeholder interactions.</li>
-              </ul>
-              <div class="tech-stack-tags">
-                <span class="tag">Java</span>
-                <span class="tag">Spring Boot</span>
-                <span class="tag">Kafka</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">REST API</span>
-                <span class="tag">Jira</span>
-                <span class="tag">Jenkins</span>
-              </div>
-            </div>
-          </div>
+        </div><!-- /journey-layout -->
+      </div>
+    </section>
 
-          <!-- Experience Card 3: Wipro Limited -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="role-company">
-                  <h3 class="role-title">Senior Project Engineer</h3>
-                  <p class="company-name">Wipro Limited</p>
-                </div>
-                <span class="role-dates">Nov 2020 – Aug 2023</span>
-              </div>
-              <div class="timeline-intro-summary">
-                Developed secure back-end REST services and AngularJS modules for global financial services and security products.
-              </div>
-              <button class="btn-toggle-bullets" aria-expanded="false" data-target="bullets-wipro">
-                Show Achievements
-              </button>
-              <ul class="timeline-bullets collapsed-bullets" id="bullets-wipro">
-                <li><strong>Token Security:</strong> Designed token-based authentication filters using Spring Security for a core banking trading platform.</li>
-                <li><strong>UI Customization:</strong> Maintained front-end components using AngularJS for internal administration portals.</li>
-                <li><strong>Quality Assurance:</strong> Mentored junior engineers, ran strict structural code reviews, and enforced Test-Driven Development (TDD) with comprehensive JUnit suites.</li>
-              </ul>
-              <div class="tech-stack-tags">
-                <span class="tag">Java</span>
-                <span class="tag">Spring Boot</span>
-                <span class="tag">Spring Security</span>
-                <span class="tag">AngularJS</span>
-                <span class="tag">REST API</span>
-                <span class="tag">JUnit</span>
-              </div>
-            </div>
+    <!-- Full Journey Detail Modal -->
+    <div class="modal-overlay" id="journey-modal-overlay" hidden aria-hidden="true">
+      <div class="journey-modal" id="journey-modal" role="dialog" aria-modal="true" aria-labelledby="modal-role-title">
+        <button class="modal-close-btn" id="journey-modal-close" aria-label="Close">✕</button>
+        <div class="modal-header">
+          <div class="modal-badge" id="modal-badge" style="--badge-color:#e06030">O</div>
+          <div class="modal-title-block">
+            <h2 class="modal-role-title" id="modal-role-title">Principal Consultant</h2>
+            <p class="modal-company-name" id="modal-company-name">Oracle India</p>
+            <span class="modal-dates-pill" id="modal-dates-pill">Jan 2025 – Present</span>
           </div>
+        </div>
+        <p class="modal-summary-text" id="modal-summary-text"></p>
+        <ul class="modal-bullets-list" id="modal-bullets-list"></ul>
+        <div class="modal-tech-tags" id="modal-tech-tags"></div>
+      </div>
+    </div>
 
-          <!-- Experience Card 4: Synergy Connect -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="role-company">
-                  <h3 class="role-title">Senior Developer</h3>
-                  <p class="company-name">Synergy Connect Data Innovation</p>
-                </div>
-                <span class="role-dates">Jan 2017 – Nov 2020</span>
-              </div>
-              <div class="timeline-intro-summary">
-                Architected global CSR frameworks and digital government initiatives directly serving hundreds of thousands of users.
-              </div>
-              <button class="btn-toggle-bullets" aria-expanded="false" data-target="bullets-synergy">
-                Show Achievements
-              </button>
-              <ul class="timeline-bullets collapsed-bullets" id="bullets-synergy">
-                <li><strong>Agricultural Digitization:</strong> Developed E-Peek Pahani in partnership with TATA Foundation and the Maharashtra Government, digitizing land records for 100,000+ farmers.</li>
-                <li><strong>SaaS Architecture:</strong> Designed a multi-tenant CSR analytics portal using Spring Boot and Hibernate.</li>
-                <li><strong>Mentorship:</strong> Instructed 5 junior developers, defining development protocols and code standards.</li>
-              </ul>
-              <div class="tech-stack-tags">
-                <span class="tag">Java</span>
-                <span class="tag">Spring Boot</span>
-                <span class="tag">Spring MVC</span>
-                <span class="tag">Hibernate</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">PostgreSQL</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Experience Card 5: Neterson Technologies -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="role-company">
-                  <h3 class="role-title">Software Engineer</h3>
-                  <p class="company-name">Neterson Technologies</p>
+
+    <!-- Education Section -->
+
+    <!-- Education Section -->
+    <section class="education-section scroll-reveal" id="education">
+      <div class="section-container">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic foundation and institutional contributions.</p>
+        <div class="education-grid">
+
+          <!-- Education Card -->
+          <article class="education-card glass-panel">
+            <div class="edu-icon-wrapper" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M12 3L1 9L12 15L23 9L12 3Z" fill="currentColor" opacity="0.2" />
+                <path d="M12 3L1 9L12 15L23 9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M1 9V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M5 11.5V18C5 18 7.5 21 12 21C16.5 21 19 18 19 18V11.5" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="edu-content">
+              <div class="edu-header">
+                <div class="edu-title-block">
+                  <h3 class="edu-degree">Bachelor of Engineering — Computer Science &amp; Engineering</h3>
+                  <p class="edu-institution">NIIST Bhopal (Affiliated to RGPV University)</p>
                 </div>
-                <span class="role-dates">Sep 2015 – Dec 2016</span>
+                <div class="edu-meta">
+                  <span class="edu-dates">2010 – 2014</span>
+                  <span class="edu-grade">CGPA: 6.89 / 10</span>
+                </div>
               </div>
-              <div class="timeline-intro-summary">
-                Designed payroll, attendance, and leave management models for their flagship HR Align+ SaaS platform.
-              </div>
-              <button class="btn-toggle-bullets" aria-expanded="false" data-target="bullets-neterson">
-                Show Achievements
-              </button>
-              <ul class="timeline-bullets collapsed-bullets" id="bullets-neterson">
-                <li><strong>End-to-End Delivery:</strong> Owned the software design lifecycle for modules from functional mapping to DB schema creation.</li>
-                <li><strong>SQL Structuring:</strong> Refined heavy payroll SQL procedures to resolve computation lag times during peak dates.</li>
+              <p class="edu-description">
+                Completed a 4-year Bachelor of Engineering program with a specialization in Computer Science &amp;
+                Engineering. Built a strong foundation in data structures, algorithms, operating systems, and software
+                engineering.
+              </p>
+              <ul class="edu-highlights">
+                <li><strong>Student Coordinator:</strong> Volunteered as an events coordinator at NIIST Bhopal,
+                  organizing technical fests and workshops.</li>
+                <li><strong>Key Subjects:</strong> Data Structures &amp; Algorithms, Object-Oriented Design, Database
+                  Systems, Operating Systems, Computer Networks, Software Engineering.</li>
+                <li><strong>Final Year Project:</strong> Developed an automated attendance management system using Java
+                  and JDBC, deployed across the college department.</li>
               </ul>
-              <div class="tech-stack-tags">
+              <div class="edu-tags">
                 <span class="tag">Java</span>
-                <span class="tag">J2EE</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML/CSS</span>
-                <span class="tag">SQL Server</span>
+                <span class="tag">C / C++</span>
+                <span class="tag">DBMS</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">Computer Networks</span>
+                <span class="tag">OS</span>
               </div>
             </div>
-          </div>
+          </article>
 
         </div>
-      </div>
       </div>
     </section>
 
@@ -402,42 +541,64 @@
         <h2 class="section-title">Featured Creations</h2>
         <p class="section-subtitle">Real-world deployments showcasing Agentic AI and Full Stack implementations.</p>
         <div class="projects-grid">
-          
-          <!-- Project 1: denml.com -->
-          <article class="project-card glass-panel">
-            <div class="project-image-wrapper">
-              <img src="assets/denml_illustration.png" alt="denml.com AI Project Illustration" class="project-img" loading="lazy" width="600" height="340">
+
+          <!-- Project 1: denml.com — FEATURED HERO CARD -->
+          <article class="project-card project-card-featured glass-panel" id="proj-denml">
+            <div class="project-featured-inner">
+              <div class="project-featured-image">
+                <img src="assets/denml_illustration.png" alt="denml.com AI Project Illustration" class="project-img"
+                  loading="lazy" width="600" height="340">
+                <div class="project-featured-badge">🏆 Flagship Project</div>
+              </div>
+              <div class="project-featured-content">
+                <div class="project-header">
+                  <h3 class="project-title">denml.com</h3>
+                  <span class="project-badge status-live">Live</span>
+                </div>
+                <p class="project-description">
+                  A full-stack web platform powered by Agentic AI for intelligent content delivery, search, and
+                  personalized user engagement. Features multi-agent orchestration for search and automated document
+                  compilation.
+                </p>
+                <div class="project-tech">
+                  <span class="tag">Agentic AI</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">OpenAI API</span>
+                  <span class="tag">AWS</span>
+                </div>
+                <div class="project-featured-actions">
+                  <button class="btn-project-details" id="open-denml-modal" aria-controls="modal-denml">
+                    View Architecture Case Study &rarr;
+                  </button>
+                  <a href="https://denml.com" target="_blank" rel="noopener" class="btn-project-live">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15,3 21,3 21,9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    Visit Live Site
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="project-header">
-              <h3 class="project-title">denml.com</h3>
-              <span class="project-badge status-live">Live</span>
-            </div>
-            <p class="project-description">
-              A full-stack web platform powered by Agentic AI for intelligent content delivery, search, and personalized user engagement. Features multi-agent orchestration for search and automated document compilation.
-            </p>
-            <div class="project-tech">
-              <span class="tag">Agentic AI</span>
-              <span class="tag">Java</span>
-              <span class="tag">Spring Boot</span>
-              <span class="tag">OpenAI API</span>
-              <span class="tag">AWS</span>
-            </div>
-            <button class="btn-project-details" id="open-denml-modal" aria-controls="modal-denml">
-              View Architecture Case Study &rarr;
-            </button>
           </article>
 
           <!-- Project 2: New Bharat Skills -->
           <article class="project-card glass-panel">
             <div class="project-image-wrapper">
-              <img src="assets/bharat_illustration.png" alt="New Bharat Skills EdTech Project Illustration" class="project-img" loading="lazy" width="600" height="340">
+              <img src="assets/bharat_illustration.png" alt="New Bharat Skills EdTech Project Illustration"
+                class="project-img" loading="lazy" width="600" height="340">
             </div>
             <div class="project-header">
               <h3 class="project-title">New Bharat Skills</h3>
               <span class="project-badge status-prod">Production</span>
             </div>
             <p class="project-description">
-              An EdTech learning platform targeting digital skills development in tier-2 and tier-3 Indian cities. Integrates autonomous AI agents to build customized courses, track students, and manage support workloads dynamically.
+              An EdTech learning platform targeting digital skills development in tier-2 and tier-3 Indian cities.
+              Integrates autonomous AI agents to build customized courses, track students, and manage support workloads
+              dynamically.
             </p>
             <div class="project-tech">
               <span class="tag">Agentic AI</span>
@@ -467,24 +628,31 @@
         <div class="modal-body">
           <h4>Objective & Overview</h4>
           <p>
-            denml.com was architected to serve as an intelligent text distillation and indexing node, replacing static content syndication with multi-agent research pipelines.
+            denml.com was architected to serve as an intelligent text distillation and indexing node, replacing static
+            content syndication with multi-agent research pipelines.
           </p>
-          
+
           <h4>The AI Multi-Agent Blueprint</h4>
           <p>
             The backend coordinates independent AI workers:
           </p>
           <ul>
-            <li><strong>Reconnaissance Agent:</strong> Monitors feed integrations and structures raw web scraping inputs.</li>
-            <li><strong>Parsing & Extraction Agent:</strong> Isolates code blocks, technical parameters, and conceptual nodes using strict structured outputs.</li>
-            <li><strong>Synthesis Agent:</strong> Summarizes context, links relevant structural nodes, and formats final markdown content.</li>
+            <li><strong>Reconnaissance Agent:</strong> Monitors feed integrations and structures raw web scraping
+              inputs.</li>
+            <li><strong>Parsing & Extraction Agent:</strong> Isolates code blocks, technical parameters, and conceptual
+              nodes using strict structured outputs.</li>
+            <li><strong>Synthesis Agent:</strong> Summarizes context, links relevant structural nodes, and formats final
+              markdown content.</li>
           </ul>
 
           <h4>Technical Deep Dive</h4>
           <ul>
-            <li><strong>Java Backend:</strong> Handled query caching, AWS media bucket routing, and rate-limiting limits for LLM integrations.</li>
-            <li><strong>Infrastructure:</strong> Scaled dynamically on AWS, using EC2 boxes and automated pipelines connected directly to Github releases.</li>
-            <li><strong>API Limits:</strong> Designed exponential-backoff queues using Java threads to prevent API throttling under high bulk load.</li>
+            <li><strong>Java Backend:</strong> Handled query caching, AWS media bucket routing, and rate-limiting limits
+              for LLM integrations.</li>
+            <li><strong>Infrastructure:</strong> Scaled dynamically on AWS, using EC2 boxes and automated pipelines
+              connected directly to Github releases.</li>
+            <li><strong>API Limits:</strong> Designed exponential-backoff queues using Java threads to prevent API
+              throttling under high bulk load.</li>
           </ul>
         </div>
       </div>
@@ -502,20 +670,26 @@
         <div class="modal-body">
           <h4>Objective & Overview</h4>
           <p>
-            Designed as an EdTech accelerator for Digital India, this platform is tailored to students in rural and semi-urban districts. AI is utilized to deliver high-quality custom curricula with zero overhead costs.
+            Designed as an EdTech accelerator for Digital India, this platform is tailored to students in rural and
+            semi-urban districts. AI is utilized to deliver high-quality custom curricula with zero overhead costs.
           </p>
 
           <h4>Autonomous Features</h4>
           <ul>
-            <li><strong>Personalized Curricular Agent:</strong> Analyzes a student's diagnostic test and builds localized reading/exercise sets.</li>
-            <li><strong>Mentoring Agent:</strong> Responds to code compile or general conceptual queries in real-time, escalating to humans only if unresolved after 3 interactions.</li>
-            <li><strong>Auto-Assessment Agent:</strong> Grades open-ended code prompts, outputting precise scoring metrics and specific corrective tips.</li>
+            <li><strong>Personalized Curricular Agent:</strong> Analyzes a student's diagnostic test and builds
+              localized reading/exercise sets.</li>
+            <li><strong>Mentoring Agent:</strong> Responds to code compile or general conceptual queries in real-time,
+              escalating to humans only if unresolved after 3 interactions.</li>
+            <li><strong>Auto-Assessment Agent:</strong> Grades open-ended code prompts, outputting precise scoring
+              metrics and specific corrective tips.</li>
           </ul>
 
           <h4>Backend Blueprint</h4>
           <ul>
-            <li><strong>Stack:</strong> React UI connected to a Spring Boot microservice layer, communicating with a PostgreSQL storage node storing student progress telemetry.</li>
-            <li><strong>Scale Advantage:</strong> The deployment tracks and handles support pipelines for thousands of active students with zero manual moderators, ensuring scalability.</li>
+            <li><strong>Stack:</strong> React UI connected to a Spring Boot microservice layer, communicating with a
+              PostgreSQL storage node storing student progress telemetry.</li>
+            <li><strong>Scale Advantage:</strong> The deployment tracks and handles support pipelines for thousands of
+              active students with zero manual moderators, ensuring scalability.</li>
           </ul>
         </div>
       </div>
@@ -525,77 +699,111 @@
     <section class="certifications-section scroll-reveal" id="certifications">
       <div class="section-container">
         <h2 class="section-title">Verified Certifications</h2>
-        <div class="certifications-grid-container">
-          <div class="certifications-illustration-container">
-            <img src="assets/certifications_illustration.png" alt="Sushant Anand Technical Certifications Achievement Illustration" class="certifications-illustration-img" loading="lazy" width="400" height="400">
-          </div>
-          <div class="certifications-grid">
-          
-          <!-- Cert 1: OCI GenAI -->
-          <div class="cert-card glass-panel">
-            <div class="cert-icon-wrapper">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cert-svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" opacity="0.3"/>
-                <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+        
+        <div class="journey-layout">
+          <!-- LEFT: 3D Globe Carousel -->
+          <div class="globe-scene" id="certs-scene">
+            <!-- Earth sphere (decorative) -->
+            <div class="earth-sphere" aria-hidden="true">
+              <div class="earth-clouds"></div>
+              <div class="earth-atmosphere"></div>
+              <div class="earth-shine"></div>
             </div>
-            <h3 class="cert-title">OCI Generative AI Professional</h3>
-            <p class="cert-issuer">Oracle University</p>
-            <span class="cert-date">Issued 2026</span>
+
+            <!-- 3D card carousel (JS populated) -->
+            <div class="globe-carousel" id="certs-carousel"></div>
+
+            <p class="globe-hint">🌍 Hover to pause &nbsp;·&nbsp; Click card for full details</p>
           </div>
 
-          <!-- Cert 2: OBDX Certified -->
-          <div class="cert-card glass-panel">
-            <div class="cert-icon-wrapper">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cert-svg">
-                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+          <!-- RIGHT: Detail Panel -->
+          <div class="globe-detail-panel" id="certs-detail">
+            <div class="detail-fade-container" id="certs-detail-fade-container">
+              <div class="detail-header-row">
+                <div class="detail-logo-container" id="certs-detail-logo-container"></div>
+                <h2 class="detail-company" id="certs-detail-company">Oracle University</h2>
+              </div>
+              <div class="detail-chips" id="certs-detail-chips">
+                <span class="role-chip">AI</span>
+              </div>
+              <h3 class="detail-role" id="certs-detail-role">OCI Generative AI Professional</h3>
+              <p class="detail-dates" id="certs-detail-dates">Issued 2026</p>
+              <p class="detail-brief" id="certs-detail-brief">...</p>
+              <div class="detail-impact" id="certs-detail-impact">...</div>
+              <div class="detail-tags" id="certs-detail-tags"></div>
+              <button class="detail-expand-btn" id="certs-detail-expand-btn" data-index="0">
+                View Full Details <span class="btn-arrow">→</span>
+              </button>
             </div>
-            <h3 class="cert-title">Oracle Banking Digital Experience (OBDX) Certified</h3>
-            <p class="cert-issuer">Oracle</p>
-            <span class="cert-date">Issued 2026</span>
           </div>
-
-          <!-- Cert 3: FLEXCUBE Certified -->
-          <div class="cert-card glass-panel">
-            <div class="cert-icon-wrapper">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cert-svg">
-                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="cert-title">Oracle FLEXCUBE Basic Certified</h3>
-            <p class="cert-issuer">Oracle</p>
-            <span class="cert-date">Issued 2026</span>
-          </div>
-
-          <!-- Cert 4: Java Certified -->
-          <div class="cert-card glass-panel">
-            <div class="cert-icon-wrapper">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cert-svg">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="cert-title">Oracle Java Certified Professional</h3>
-            <p class="cert-issuer">Oracle</p>
-            <span class="cert-date">Issued 2026</span>
-          </div>
-
-          <!-- Cert 5: AWS CCP -->
-          <div class="cert-card glass-panel">
-            <div class="cert-icon-wrapper">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cert-svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="cert-title">AWS Cloud Practitioner</h3>
-            <p class="cert-issuer">Amazon Web Services</p>
-            <span class="cert-date">Issued 2026</span>
-          </div>
-
         </div>
       </div>
+    </section>
+
+    <!-- AI Assistant Chatbot Section -->
+    <section class="chatbot-section scroll-reveal" id="ai-assistant">
+      <div class="section-container">
+        <h2 class="section-title">Interactive AI Assistant</h2>
+        <p class="section-subtitle">
+          Have specific questions about my engineering background, enterprise banking history, or OCI Generative AI
+          projects? Ask my custom AI agent directly below.
+        </p>
+
+        <div class="chatbot-full-wrapper">
+          <div class="chat-widget-card glass-panel" id="agent-chatbot-widget">
+            <div class="chat-widget-header">
+              <!-- Simulated Window Controls for Premium look -->
+              <div class="window-controls" style="display: flex; gap: 6px; margin-right: 8px;" aria-hidden="true">
+                <span
+                  style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+                <span
+                  style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+                <span
+                  style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+              </div>
+
+              <div class="bot-avatar-wrapper" style="margin-left: 12px;">
+                <img src="assets/chatbot_avatar.png" alt="Sushant's Virtual Agent" class="bot-avatar" width="40"
+                  height="40">
+                <span class="online-indicator"></span>
+              </div>
+              <div class="bot-header-text">
+                <h3 class="bot-name">Sushant's AI Assistant</h3>
+                <p class="bot-status">Powered by Agentic AI · Online</p>
+              </div>
+            </div>
+
+            <div class="chat-widget-body" id="chat-messages-container">
+              <div class="message msg-bot">
+                <div class="message-bubble">
+                  Hi! I'm Sushant's virtual assistant. Ask me anything about his 10+ years of engineering experience,
+                  certifications, or custom projects like <strong>denml.com</strong>!
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-widget-suggested-prompts">
+              <button class="suggested-prompt-btn" data-query="What is Sushant's current role?">Current Role?</button>
+              <button class="suggested-prompt-btn" data-query="Tell me about his Agentic AI experience.">Agentic
+                AI?</button>
+              <button class="suggested-prompt-btn" data-query="What are his core tech stacks?">Tech Stack?</button>
+              <button class="suggested-prompt-btn"
+                data-query="Which banking systems has he worked on?">Banking?</button>
+            </div>
+
+            <form class="chat-widget-input-form" id="chat-input-form">
+              <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Chat input message"
+                autocomplete="off">
+              <button type="submit" class="chat-send-btn" aria-label="Send message" id="chat-send-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -604,39 +812,60 @@
       <div class="section-container">
         <h2 class="section-title">Start a Conversation</h2>
         <div class="contact-grid">
-          
+
           <!-- Contact Info -->
           <div class="contact-info">
             <div class="contact-illustration-container">
-              <img src="assets/contact_illustration.png" alt="Contact Sushant Illustration" class="contact-illustration-img" loading="lazy" width="400" height="400">
+              <img src="assets/contact_illustration.png" alt="Contact Sushant Illustration"
+                class="contact-illustration-img" loading="lazy" width="400" height="400">
             </div>
             <h3 class="contact-subtitle">Get In Touch</h3>
             <p>
-              Looking to bring robust AI capabilities to your core systems, automate high-stakes compliance pipelines, or pivot an enterprise architecture to Agentic reasoning? Let's talk.
+              Looking to bring robust AI capabilities to your core systems, automate high-stakes compliance pipelines,
+              or pivot an enterprise architecture to Agentic reasoning? Let's talk.
             </p>
-            
+
             <ul class="contact-details-list">
               <li>
                 <span class="contact-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
                 </span>
                 <a href="mailto:sushant.saj@gmail.com" class="contact-link">sushant.saj@gmail.com</a>
               </li>
               <li>
                 <span class="contact-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
                 </span>
                 <a href="tel:+917400191131" class="contact-link">+91 7400191131</a>
               </li>
               <li>
                 <span class="contact-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
                 </span>
-                <a href="https://linkedin.com/in/thesushantanand" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/thesushantanand</a>
+                <a href="https://linkedin.com/in/thesushantanand" target="_blank" rel="noopener"
+                  class="contact-link">linkedin.com/in/thesushantanand</a>
               </li>
               <li>
                 <span class="contact-icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-svg"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="contact-svg">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
                 </span>
                 <a href="https://denml.com" target="_blank" rel="noopener" class="contact-link">denml.com</a>
               </li>
@@ -652,7 +881,8 @@
               </div>
               <div class="form-group">
                 <label for="contact-email">Email</label>
-                <input type="email" id="contact-email" name="email" required placeholder="your.name@company.com" autocomplete="email" inputmode="email">
+                <input type="email" id="contact-email" name="email" required placeholder="your.name@company.com"
+                  autocomplete="email" inputmode="email">
               </div>
               <div class="form-group">
                 <label for="contact-message">Message</label>
@@ -671,62 +901,6 @@
       </div>
     </section>
 
-    <!-- AI Assistant Chatbot Section -->
-    <section class="chatbot-section scroll-reveal" id="ai-assistant">
-      <div class="section-container">
-        <h2 class="section-title">Interactive AI Assistant</h2>
-        <p class="section-subtitle" style="margin-bottom: 40px; color: var(--text-secondary); text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-          Have specific questions about my engineering background, enterprise banking history, or OCI Generative AI projects? Ask my custom AI agent directly below.
-        </p>
-        
-        <div class="chatbot-full-wrapper">
-          <div class="chat-widget-card glass-panel" id="agent-chatbot-widget">
-            <div class="chat-widget-header">
-              <!-- Simulated Window Controls for Premium look -->
-              <div class="window-controls" style="display: flex; gap: 6px; margin-right: 8px;" aria-hidden="true">
-                <span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
-                <span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
-                <span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
-              </div>
-              
-              <div class="bot-avatar-wrapper" style="margin-left: 12px;">
-                <img src="assets/chatbot_avatar.png" alt="Sushant's Virtual Agent" class="bot-avatar" width="40" height="40">
-                <span class="online-indicator"></span>
-              </div>
-              <div class="bot-header-text">
-                <h3 class="bot-name">Sushant's AI Assistant</h3>
-                <p class="bot-status">Powered by Agentic AI · Online</p>
-              </div>
-            </div>
-            
-            <div class="chat-widget-body" id="chat-messages-container">
-              <div class="message msg-bot">
-                <div class="message-bubble">
-                  Hi! I'm Sushant's virtual assistant. Ask me anything about his 10+ years of engineering experience, certifications, or custom projects like <strong>denml.com</strong>!
-                </div>
-              </div>
-            </div>
-            
-            <div class="chat-widget-suggested-prompts">
-              <button class="suggested-prompt-btn" data-query="What is Sushant's current role?">Current Role?</button>
-              <button class="suggested-prompt-btn" data-query="Tell me about his Agentic AI experience.">Agentic AI?</button>
-              <button class="suggested-prompt-btn" data-query="What are his core tech stacks?">Tech Stack?</button>
-              <button class="suggested-prompt-btn" data-query="Which banking systems has he worked on?">Banking?</button>
-            </div>
-            
-            <form class="chat-widget-input-form" id="chat-input-form">
-              <input type="text" id="chat-input" placeholder="Type a question..." aria-label="Chat input message" autocomplete="off">
-              <button type="submit" class="chat-send-btn" aria-label="Send message" id="chat-send-button">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer Landmark -->
@@ -735,6 +909,7 @@
       <p class="copyright">&copy; 2026 Sushant Anand. All Rights Reserved.</p>
       <div class="footer-links">
         <a href="https://linkedin.com/in/thesushantanand" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/thesushantanand" target="_blank" rel="noopener">GitHub</a>
         <a href="https://denml.com" target="_blank" rel="noopener">denml.com</a>
       </div>
     </div>
@@ -743,4 +918,5 @@
   <!-- Scripts -->
   <script src="app.js"></script>
 </body>
+
 </html>
