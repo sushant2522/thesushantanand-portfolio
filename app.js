@@ -440,24 +440,52 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardAngle  = (currentAngle + baseOffset) % 360;
         const rad = cardAngle * Math.PI / 180;
 
-        const cosA = Math.cos(rad);
-        const sinA = Math.sin(rad);
-
-        const y = sinA * RADIUS;
-        const z = -cosA * RADIUS;
-
-        const depthFactor = (-cosA + 1) / 2;
-        const scale   = 0.42 + depthFactor * 0.58;
-        const opacity = depthFactor < 0.05 ? 0 : 0.25 + depthFactor * 0.75;
-        const zIdx    = Math.round(depthFactor * 100);
-
-        el.style.transform = `translateY(${y.toFixed(1)}px) translateZ(${z.toFixed(1)}px) scale(${scale.toFixed(3)})`;
-        el.style.opacity   = opacity.toFixed(3);
-        el.style.zIndex    = zIdx;
-        el.classList.toggle('card-is-front', depthFactor > 0.9);
-
+        let x = 0, y = 0, z = 0, scale = 1, opacity = 1, zIdx = 1;
         const normalized = ((cardAngle % 360) + 360) % 360;
         const dist = Math.min(Math.abs(normalized - 180), 360 - Math.abs(normalized - 180));
+
+        if (config.isLinear) {
+          let delta = normalized - 180;
+          if (delta > 180) delta -= 360;
+          if (delta < -180) delta += 360;
+          
+          const linearDist = Math.abs(delta);
+
+          // Tighter vertical spacing: cards are 130px apart
+          // delta goes from -180 to 180.
+          // Let's map delta=60 to 140px instead of 220px
+          y = -(delta / 60) * 140; 
+          z = 0;
+
+          // Keep opacity high enough so 3 cards are clearly visible
+          opacity = linearDist < 100 ? 1 - (linearDist / 120) : 0;
+          // Scale: middle is 1.0, cards at delta=60 are ~0.7
+          scale = 0.5 + (0.5 * Math.max(0, 1 - (linearDist / 100)));
+          
+          zIdx = Math.round((1 - linearDist/180) * 100);
+          el.classList.toggle('card-is-front', linearDist < 10);
+          el.style.transform = `translateY(${y.toFixed(1)}px) translateZ(${z.toFixed(1)}px) scale(${scale.toFixed(3)})`;
+        } else {
+          // Standard 3D circle carousel (Horizontal)
+          const cosA = Math.cos(rad);
+          const sinA = Math.sin(rad);
+
+          // Horizontal rotation uses X and Z axes
+          x = sinA * RADIUS;
+          z = -cosA * RADIUS;
+          y = 0; // Center vertically
+
+          opacity = dist < 75 ? 1 - (dist / 75) : 0;
+          scale = 0.5 + (0.5 * Math.max(0, 1 - (dist / 90)));
+          zIdx = Math.round((1 - dist/180) * 100);
+          el.classList.toggle('card-is-front', dist < 10);
+
+          el.style.transform = `translateX(${x.toFixed(1)}px) translateY(${y.toFixed(1)}px) translateZ(${z.toFixed(1)}px) scale(${scale.toFixed(3)})`;
+        }
+
+        el.style.opacity   = opacity.toFixed(3);
+        el.style.zIndex    = zIdx;
+
         if (dist < minDistFromFront) { minDistFromFront = dist; newFront = i; }
       });
 
@@ -1178,7 +1206,8 @@ document.addEventListener('DOMContentLoaded', () => {
       carouselId: 'skillsCarouselContainer',
       sceneId: 'skillsScene',
       autoRotateSpeed: 0.15,
-      radiusBase: 150
+      radiusBase: 220,
+      isLinear: true
     });
   }
 
