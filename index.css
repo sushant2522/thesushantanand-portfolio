@@ -2934,6 +2934,90 @@ dialog[open]::backdrop {
   transform: translateY(-2px);
 }
 
+/* CV Dropdown Styles */
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.cv-dropdown-btn {
+  /* Inherits from .btn-hero-outline */
+  outline: none;
+}
+
+.dropdown-arrow {
+  margin-left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.cv-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.cv-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: rgba(13, 17, 26, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 204, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+/* Add an invisible pseudo-element to bridge the gap and keep hover state active */
+.cv-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+
+.cv-dropdown:hover .cv-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.cv-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cv-dropdown-item:hover {
+  background: rgba(0, 255, 204, 0.1);
+  transform: translateX(4px);
+}
+
+.cv-item-title {
+  color: var(--accent-green);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-family: var(--font-primary);
+}
+
+.cv-item-desc {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-family: var(--font-body);
+}
+
 .hero-socials {
   display: flex;
   align-items: center;
@@ -3213,26 +3297,18 @@ dialog[open]::backdrop {
   overflow: hidden;
 }
 
-.code-bubble {
+.glitter-particle {
   position: absolute;
   bottom: -80px;
-  font-family: 'Courier New', 'Fira Code', monospace;
-  font-size: var(--font-size, 11px);
-  font-weight: 600;
-  line-height: 1;
-  white-space: nowrap;
-  color: var(--bubble-color, rgba(6, 182, 212, 0.55));
-  text-shadow: 0 0 var(--glow, 8px) var(--bubble-color, rgba(6, 182, 212, 0.4));
-  background: var(--bubble-bg, rgba(6, 182, 212, 0.04));
-  border: 1px solid var(--bubble-border, rgba(6, 182, 212, 0.12));
-  border-radius: 6px;
-  padding: 4px 8px;
-  backdrop-filter: blur(2px);
+  width: var(--font-size, 4px);
+  height: var(--font-size, 4px);
+  border-radius: 50%;
+  background: var(--bubble-color, rgba(6, 182, 212, 0.55));
+  box-shadow: 0 0 var(--glow, 10px) var(--bubble-color, rgba(6, 182, 212, 0.8));
   left: var(--x, 50%);
   opacity: 0;
   animation: code-bubble-rise var(--dur, 14s) var(--delay, 0s) ease-in-out infinite;
-  letter-spacing: 0.03em;
-  user-select: none;
+  pointer-events: none;
 }
 
 @keyframes code-bubble-rise {
@@ -3254,6 +3330,38 @@ dialog[open]::backdrop {
     transform: translateY(calc(-110vh)) translateX(calc(var(--drift, 20px) * 2)) rotate(calc(var(--tilt, 0deg) * 2));
     opacity: 0;
   }
+}
+
+/* ==========================================================================
+   STATIC SKILLS GRID
+   ========================================================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.skills-grid .globe-card {
+  position: relative;
+  width: auto;
+  height: auto;
+  min-height: 158px;
+  top: auto;
+  left: auto;
+  margin: 0;
+  transform: none !important;
+  opacity: 1 !important;
+  z-index: 1 !important;
+  border-color: rgba(6,182,212,0.3);
+}
+
+.skills-grid .globe-card:hover {
+  border-color: rgba(6,182,212,0.8);
+  box-shadow: 0 8px 24px rgba(6,182,212,0.15);
+  transform: translateY(-5px) !important;
 }
 
 /* ==========================================================================
@@ -3337,9 +3445,98 @@ dialog[open]::backdrop {
   box-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
 }
 
+/* ==========================================================================
+   MOBILE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
 @media (max-width: 1024px) {
-  .fixed-side-menu {
-    display: none;
+  .hero-container {
+    flex-direction: column !important;
+    text-align: center;
+    padding-top: 80px;
   }
+  .hero-text-col {
+    max-width: 100% !important;
+    align-items: center;
+  }
+  .hero-headline { font-size: 48px !important; }
+  .hero-roles { justify-content: center; flex-wrap: wrap; }
+  .hero-subtext { text-align: center; }
+  .hero-actions { justify-content: center; flex-wrap: wrap; }
+  .hero-socials { justify-content: center; }
+  
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Global Typography */
+  h1.hero-headline { font-size: 36px !important; line-height: 1.1 !important; }
+  h2.section-title { font-size: 32px !important; }
+  h3.about-subtitle { font-size: 24px !important; }
+  p.hero-subtext { font-size: 16px !important; }
+  .hero-avatar-scene { transform: scale(0.8); }
+  
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* 3D Carousels (Experience & Certs) */
+  .journey-carousel {
+    transform: scale(0.65);
+    transform-origin: center top;
+    margin-bottom: -150px;
+  }
+
+  /* Fixed Side Menu -> Bottom Nav */
+  .fixed-side-menu {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 5px;
+    background: rgba(13, 17, 26, 0.95);
+    border-right: none;
+    border-top: 1px solid rgba(0, 255, 204, 0.15);
+    border-radius: 20px 20px 0 0;
+    z-index: 1000;
+  }
+  
+  .side-menu-btn {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 10px;
+    padding: 8px;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    box-shadow: none;
+  }
+  .side-menu-btn:hover {
+    transform: translateY(-2px);
+    border-bottom-color: var(--accent-green);
+    background: rgba(255,255,255,0.05);
+    box-shadow: none;
+  }
+  .side-text { font-size: 10px !important; letter-spacing: 0; }
+  .beta-badge { display: none; }
+  
+  /* Main Container Padding to account for bottom nav */
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.hero-headline { font-size: 32px !important; }
+  .hero-avatar-scene { transform: scale(0.65); margin-top: -30px; }
+  .journey-carousel { transform: scale(0.55); margin-bottom: -180px; }
+  .side-text { font-size: 9px !important; }
 }
 

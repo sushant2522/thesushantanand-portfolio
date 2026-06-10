@@ -87,11 +87,11 @@
       <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
       <span class="side-text" style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 1.5px; color: #fff;">DENML</span>
     </a>
-    <a href="#" class="side-menu-btn">
+    <a href="blog.html" class="side-menu-btn">
       <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
       <span class="side-text">Blog <span class="beta-badge">BETA</span></span>
     </a>
-    <a href="#" class="side-menu-btn">
+    <a href="photography.html" class="side-menu-btn">
       <svg class="side-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
       <span class="side-text">Photography <span class="beta-badge">BETA</span></span>
     </a>
@@ -233,16 +233,30 @@
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </a>
-            <a href="assets/Sushant_Anand_Resume.pdf" class="btn btn-hero-outline" download
-              aria-label="Download Sushant Anand's Resume">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                <polyline points="7,10 12,15 17,10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Download CV
-            </a>
+            <div class="cv-dropdown">
+              <button class="btn btn-hero-outline cv-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                  <polyline points="7,10 12,15 17,10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download CV
+                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="cv-dropdown-menu">
+                <a href="assets/Sushant_Anand_Resume_ATS.pdf" download class="cv-dropdown-item">
+                  <span class="cv-item-title">ATS Friendly</span>
+                  <span class="cv-item-desc">Optimized for scanners</span>
+                </a>
+                <a href="assets/Sushant_Anand_Resume_Manager.pdf" download class="cv-dropdown-item">
+                  <span class="cv-item-title">Manager Friendly</span>
+                  <span class="cv-item-desc">Visual & styled layout</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="hero-socials">
@@ -389,10 +403,8 @@
           <!-- RIGHT: Core Moat & Skills (Vertical 3D Carousel) -->
           <div class="skills-showcase-side" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <h3 class="about-subtitle" style="text-align: center; margin-bottom: 20px;">Core Moat &amp; Skills</h3>
-            <div class="journey-carousel skills-carousel" id="skillsCarouselContainer" aria-label="Interactive 3D Carousel of Skill Categories">
-              <div class="scene skills-scene" id="skillsScene">
-                <!-- JS injected cards go here -->
-              </div>
+            <div class="skills-grid" id="skillsGridContainer" aria-label="Grid of Skill Categories">
+              <!-- JS injected cards go here -->
             </div>
           </div>
         </div><!-- /about-grid -->

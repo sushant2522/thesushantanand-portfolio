@@ -304,24 +304,60 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
-      company: 'DevOps & DB', role: 'Infrastructure & Data',
-      dates: 'Expertise', dateShort: 'DevOps',
-      brief: 'Automating deployments and managing highly available databases.',
-      impact: '☁️ Cloud',
-      chips: ['AWS', 'CI/CD'],
+      company: 'Cloud & DevOps', role: 'Infrastructure',
+      dates: 'Expertise', dateShort: 'Cloud',
+      brief: 'Deploying resilient, scalable architectures on modern cloud platforms.',
+      impact: '☁️ Cloud Native',
+      chips: ['AWS', 'Docker'],
       svg: `<svg viewBox="0 0 100 100" width="80" height="80" class="cert-svg">
               <circle cx="50" cy="50" r="48" fill="#12131A" stroke="#8b5cf6" stroke-width="2"/>
               <text x="50" y="65" font-size="40" text-anchor="middle">☁️</text>
             </svg>`,
       tags: [],
       bullets: [
-        '<strong>AWS EC2:</strong> Scalable cloud compute provisioning and management.',
-        '<strong>PostgreSQL:</strong> Advanced open-source relational database architecture.',
-        '<strong>Oracle DB:</strong> Enterprise-grade database management and SQL optimization.',
-        '<strong>MongoDB:</strong> NoSQL database design for flexible, document-based storage.',
-        '<strong>Docker:</strong> Containerization for consistent environments across the deployment lifecycle.',
-        '<strong>Jenkins CI/CD:</strong> Automation of continuous integration and continuous delivery pipelines.',
-        '<strong>Git / Bitbucket:</strong> Source control management and collaborative team workflows.'
+        '<strong>AWS:</strong> Designing cloud-native solutions using EC2, S3, RDS, and Lambda.',
+        '<strong>Oracle Cloud Infrastructure (OCI):</strong> Deploying enterprise workloads and GenAI services.',
+        '<strong>Docker & Kubernetes:</strong> Containerizing microservices for consistent, scalable deployments.',
+        '<strong>CI/CD Pipelines:</strong> Automating build, test, and deployment workflows with Jenkins and GitHub Actions.',
+        '<strong>Infrastructure as Code:</strong> Provisioning infrastructure reliably and repeatedly.'
+      ]
+    },
+    {
+      company: 'Databases', role: 'Architecture',
+      dates: 'Expertise', dateShort: 'Data',
+      brief: 'Designing high-performance, secure relational and NoSQL database schemas.',
+      impact: '🗄️ Data Systems',
+      chips: ['Oracle', 'PostgreSQL'],
+      svg: `<svg viewBox="0 0 100 100" width="80" height="80" class="cert-svg">
+              <circle cx="50" cy="50" r="48" fill="#12131A" stroke="#f43f5e" stroke-width="2"/>
+              <text x="50" y="65" font-size="40" text-anchor="middle">🗄️</text>
+            </svg>`,
+      tags: [],
+      bullets: [
+        '<strong>Oracle Database:</strong> Advanced schema design, PL/SQL optimization, and tuning.',
+        '<strong>PostgreSQL & MySQL:</strong> Managing open-source relational databases for microservices.',
+        '<strong>NoSQL:</strong> Integrating MongoDB or Redis for high-speed caching and document stores.',
+        '<strong>Data Migration:</strong> Securely moving and transforming data across environments.',
+        '<strong>Transaction Management:</strong> Ensuring ACID properties in distributed systems.'
+      ]
+    },
+    {
+      company: 'Leadership', role: 'Agile Methodology',
+      dates: 'Expertise', dateShort: 'Agile',
+      brief: 'Leading cross-functional technical teams to deliver complex software projects.',
+      impact: '👥 Team Lead',
+      chips: ['Scrum', 'Mentoring'],
+      svg: `<svg viewBox="0 0 100 100" width="80" height="80" class="cert-svg">
+              <circle cx="50" cy="50" r="48" fill="#12131A" stroke="#0ea5e9" stroke-width="2"/>
+              <text x="50" y="65" font-size="40" text-anchor="middle">👥</text>
+            </svg>`,
+      tags: [],
+      bullets: [
+        '<strong>Agile/Scrum:</strong> Facilitating sprints, standups, and retrospective ceremonies.',
+        '<strong>Technical Leadership:</strong> Architecting solutions and guiding technical decision-making.',
+        '<strong>Mentorship:</strong> Coaching junior and mid-level developers on best practices.',
+        '<strong>Stakeholder Communication:</strong> Translating business requirements into technical roadmaps.',
+        '<strong>Code Reviews:</strong> Maintaining high code quality and architectural integrity.'
       ]
     }
   ];
@@ -847,155 +883,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
-     FULL-PAGE JAVA CODE BUBBLES — rising code snippets
+     FULL-PAGE GLITTER PARTICLES — flowing background glitters
      ========================================================================== */
   const glitterBg = document.getElementById('glitter-bg');
   if (glitterBg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
-    // Java/Spring Boot code snippets to float up
-    const JAVA_SNIPPETS = [
-      '@SpringBootApplication',
-      '@RestController',
-      '@GetMapping("/api")',
-      '@PostMapping("/auth")',
-      '@Autowired',
-      '@Service',
-      '@Repository',
-      '@Entity',
-      '@Transactional',
-      '@Override',
-      'List<String>',
-      'Optional<T>',
-      'CompletableFuture',
-      'Stream.of()',
-      '.filter(x -> x != null)',
-      '.map(dto::from)',
-      '.collect(toList())',
-      'ResponseEntity<>',
-      'HttpStatus.OK',
-      'throws Exception',
-      'try { ... }',
-      'catch (e)',
-      'new HashMap<>()',
-      'extends BaseEntity',
-      'implements Service',
-      'public static void',
-      'private final',
-      'return result;',
-      '@PathVariable',
-      '@RequestBody',
-      '@Valid',
-      'JpaRepository<>',
-      'EntityManager',
-      'Kafka.send()',
-      '@Scheduled',
-      'ThreadPoolExecutor',
-      'synchronized',
-      'volatile',
-      '@EnableJwtSecurity',
-      'BCryptEncoder',
-      'JWT.verify()',
-      'ObjectMapper',
-      '.readValue(json)',
-      'Spring.run()',
-      'application.yml',
-      '@Column(unique)',
-      'JPQL query',
-      '@Cacheable',
-      '@Async',
-      'LangChain4j',
-      'AiAgent.invoke()',
-      'RAG.retrieve()',
-      '.build()',
-      'Builder pattern',
-      'Singleton.get()',
-      'Factory.create()',
-      '@OneToMany',
-      '@ManyToOne',
-      'ACID compliant',
-      '99.9% uptime',
-      'Microservice',
-      'Docker.run()',
-      'CI/CD pipeline',
-      'REST API',
-      'OAuth 2.0',
-      'JWT token',
-      'Redis cache',
-      'PostgreSQL',
-      'Oracle DB',
-      'AWS EC2',
-      'Spring Security',
-      'Hibernate ORM',
-      'Apache Kafka',
-      '@EnableCaching',
-      'log.info(msg)',
-      'Assert.notNull()',
-      'UUID.randomUUID()',
-      'LocalDateTime.now()',
-      'BigDecimal amount',
-    ];
-
-    // Color themes: cyan, indigo, violet
+    // Color themes: cyan, indigo, violet, custom
     const THEMES = [
       {
         color: 'rgba(6,182,212,VAR)',
-        bg: 'rgba(6,182,212,0.04)',
-        border: 'rgba(6,182,212,0.14)',
-        glow: '10px',
-      },
-      {
-        color: 'rgba(99,102,241,VAR)',
-        bg: 'rgba(99,102,241,0.04)',
-        border: 'rgba(99,102,241,0.14)',
-        glow: '10px',
-      },
-      {
-        color: 'rgba(139,92,246,VAR)',
-        bg: 'rgba(139,92,246,0.04)',
-        border: 'rgba(139,92,246,0.12)',
         glow: '8px',
       },
       {
-        color: 'rgba(56,189,248,VAR)',
-        bg: 'rgba(56,189,248,0.04)',
-        border: 'rgba(56,189,248,0.12)',
+        color: 'rgba(99,102,241,VAR)',
+        glow: '8px',
+      },
+      {
+        color: 'rgba(139,92,246,VAR)',
+        glow: '6px',
+      },
+      {
+        color: 'rgba(255,255,255,VAR)',
         glow: '10px',
       },
     ];
 
-    const BUBBLE_COUNT = 80;
+    const PARTICLE_COUNT = 150;
 
-    for (let i = 0; i < BUBBLE_COUNT; i++) {
-      const el = document.createElement('span');
-      el.className = 'code-bubble';
-
-      // Pick a random snippet
-      const snippet = JAVA_SNIPPETS[Math.floor(Math.random() * JAVA_SNIPPETS.length)];
-      el.textContent = snippet;
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      const el = document.createElement('div');
+      el.className = 'glitter-particle';
 
       // Pick a random color theme
       const theme = THEMES[Math.floor(Math.random() * THEMES.length)];
-      const peakOp = (Math.random() * 0.45 + 0.2).toFixed(2);   // 0.20–0.65
+      const peakOp = (Math.random() * 0.5 + 0.3).toFixed(2);   // 0.30–0.80
       const color = theme.color.replace('VAR', peakOp);
 
       // Random properties
-      const xPos = (Math.random() * 98).toFixed(1);             // 0–98%
-      const dur = (Math.random() * 16 + 12).toFixed(1);        // 12–28s
-      const delay = (Math.random() * 25).toFixed(1);             // 0–25s stagger
-      const size = (Math.random() * 3 + 9).toFixed(0);          // 9–12px font
-      const drift = ((Math.random() - 0.5) * 120).toFixed(0);    // -60 to +60px
-      const tilt = ((Math.random() - 0.5) * 10).toFixed(1);     // -5 to +5 deg
+      const xPos = (Math.random() * 100).toFixed(1);            // 0–100%
+      const dur = (Math.random() * 20 + 10).toFixed(1);        // 10–30s
+      const delay = (Math.random() * 30).toFixed(1);             // 0–30s stagger
+      const size = (Math.random() * 4 + 2).toFixed(1);          // 2–6px diameter
+      const drift = ((Math.random() - 0.5) * 80).toFixed(0);    // -40 to +40px
 
       el.style.setProperty('--bubble-color', color);
-      el.style.setProperty('--bubble-bg', theme.bg);
-      el.style.setProperty('--bubble-border', theme.border);
       el.style.setProperty('--glow', theme.glow);
       el.style.setProperty('--x', `${xPos}%`);
       el.style.setProperty('--dur', `${dur}s`);
       el.style.setProperty('--delay', `-${delay}s`);  // negative = already mid-flight
       el.style.setProperty('--font-size', `${size}px`);
       el.style.setProperty('--drift', `${drift}px`);
-      el.style.setProperty('--tilt', `${tilt}deg`);
       el.style.setProperty('--peak-op', peakOp);
 
       glitterBg.appendChild(el);
@@ -1177,6 +1114,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroOrbit = document.querySelector('.hero-avatar-scene .orbit-track');
   if (heroOrbit) {
     initSkillOrbit(heroOrbit, ALL_SKILLS, { slots: 12, radius: 215, periodMs: 28000, cycleMs: 7000, direction: 1 });
+  }
+
+
+  // Init Skills as Static Grid
+  const skillsGridContainer = document.getElementById('skillsGridContainer');
+  if (skillsGridContainer && skillsData.length > 0) {
+    skillsData.forEach((d, i) => {
+      const el = document.createElement('div');
+      el.className = 'globe-card';
+      el.id = `skills-grid-card-${i}`;
+      el.dataset.index = i;
+      el.innerHTML = `
+        <div class="card-face simplified-card">
+          <div class="card-logo-container">${d.svg}</div>
+          <h3 class="card-role-full">${d.role}</h3>
+          <p class="card-company-text">${d.company}</p>
+          <span class="card-year-pill">${d.dateShort}</span>
+        </div>`;
+      
+      // Bind click to the same modal logic
+      el.addEventListener('click', () => {
+        openGlobalModalForData(d);
+      });
+      
+      skillsGridContainer.appendChild(el);
+    });
+  }
+
+  // Helper for grid modal
+  function openGlobalModalForData(d) {
+    const modalOverlay = document.getElementById('journey-modal-overlay');
+    if (!modalOverlay) return;
+    
+    document.getElementById('modal-logo-container').innerHTML = d.svg || '';
+    document.getElementById('modal-chips').innerHTML          = (d.chips||[]).map(c => `<span class="modal-chip">${c}</span>`).join('');
+    document.getElementById('modal-role').textContent         = d.role;
+    document.getElementById('modal-company').textContent      = d.company;
+    document.getElementById('modal-dates').textContent        = d.dates;
+    document.getElementById('modal-summary-text').textContent = d.brief;
+    document.getElementById('modal-bullets-list').innerHTML   = (d.bullets||[]).map(b => `<li>${b}</li>`).join('');
+    document.getElementById('modal-tech-tags').innerHTML      = (d.tags||[]).map(t => `<span class="card-tag ${t.c}">${t.l}</span>`).join('');
+    
+    modalOverlay.removeAttribute('hidden');
+    modalOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   }
 
 
