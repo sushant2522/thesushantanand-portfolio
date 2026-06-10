@@ -3457,9 +3457,11 @@ dialog[open]::backdrop {
    ========================================================================== */
 @media (max-width: 1024px) {
   .hero-container {
+    display: flex !important;
     flex-direction: column !important;
     text-align: center;
-    padding-top: 80px;
+    padding: 80px 24px 40px 24px !important;
+    gap: 40px !important;
   }
   .hero-text-col {
     max-width: 100% !important;
@@ -3542,8 +3544,11 @@ dialog[open]::backdrop {
 
 @media (max-width: 480px) {
   h1.hero-headline { font-size: 32px !important; }
-  .hero-avatar-scene { transform: scale(0.65); margin-top: -30px; }
-  .journey-carousel { transform: scale(0.55); margin-bottom: -180px; }
+  .hero-avatar-scene { transform: scale(0.55) !important; margin-top: -30px; }
+  .journey-carousel { transform: scale(0.55) !important; margin-bottom: -180px; }
+  .globe-scene { transform: scale(0.55) !important; margin-bottom: -100px; }
   .side-text { font-size: 9px !important; }
+  .section-container { padding: 0 16px !important; }
+  .hero-container { padding: 60px 16px 30px 16px !important; }
 }
 
